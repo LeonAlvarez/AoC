@@ -1,0 +1,27 @@
+{
+  "include": ["**/*.ts", "../packages/lib/**/*.ts"],
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM"],
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "target": "ES2022",
+    "module": "NodeNext",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@config/*": ["src/config/*"],
+      "@wp/*": ["src/wp/*"],
+      "@db/*": ["src/db/*"],
+      "@utils/*": ["src/utils/*"],
+      "@services/*": ["src/services/*"]
+    },
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["./test/types/*.test-d.ts", "./*.d.ts"]
+}
