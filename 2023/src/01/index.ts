@@ -30,7 +30,6 @@ const parse = (data: string[]) =>
 
 const sum = (items: number[]) => items.reduce((sum, item) => sum + item, 0);
 const sol1 = sum(parse(input.split("\n")));
-console.log(`Sol1: ${sol1}`);
-
 const sol2 = sum(parse(sanitize(input).split("\n")));
-console.log(`Sol2: ${sol2}`);
+
+console.log({ sol1, sol2 });
