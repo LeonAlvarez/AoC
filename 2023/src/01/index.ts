@@ -24,12 +24,11 @@ const sanitize = (str: string): string => {
 
 const parse = (data: string[]) =>
   data.map((entry: string) => {
-    const nums = entry.split("").filter((x) => !isNaN(parseInt(x)));
-    return parseInt([nums.at(0), nums.at(-1)].join(""));
+    const nums = entry.split("").filter((x) => !isNaN(Number(x)));
+    return Number([nums.at(0), nums.at(-1)].join(""));
   });
 
 const sum = (items: number[]) => items.reduce((sum, item) => sum + item, 0);
 const sol1 = sum(parse(input.split("\n")));
 const sol2 = sum(parse(sanitize(input).split("\n")));
-
 console.log({ sol1, sol2 });
