@@ -5,7 +5,7 @@ const input = fs.readFileSync(`${__dirname}/input`, "utf8");
 const words = {
   zero: "ze0o",
   one: "o1e",
-  two: "t2e",
+  two: "t2o",
   three: "thr3e",
   four: "fou4r",
   five: "fiv5e",
