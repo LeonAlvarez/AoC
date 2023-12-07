@@ -88,6 +88,7 @@ const checkAdjacentGear = (gear: Gear, symbol: Symbol) => {
   if (Math.abs(symbol.y - gear.y) > 1) return false;
   if (symbol.x <= gear.end + 1 && symbol.x >= gear.start - 1) return true;
 };
+
 const sol1 = (parsed: Parsed) =>
   parsed.gears
     .filter((gear) => {
